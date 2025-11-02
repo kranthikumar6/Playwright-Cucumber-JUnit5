@@ -1,7 +1,7 @@
-package cucumber.catalog.pageobjects;
+package starter.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
-import cucumber.fixtures.ProductSummary;
+
 import java.util.List;
 
 public class ProductList {

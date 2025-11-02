@@ -1,4 +1,4 @@
-package cucumber.catalog.pageobjects;
+package starter.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
@@ -31,7 +31,7 @@ public class SearchComponent {
     }
 
     public void sortBy(String sortFilter) {
-        page.waitForResponse("**/products?sort=**", () -> {
+        page.waitForResponse("**/products*sort*", () -> {
             page.getByTestId("sort").selectOption(sortFilter);
         });
         page.waitForTimeout(250);

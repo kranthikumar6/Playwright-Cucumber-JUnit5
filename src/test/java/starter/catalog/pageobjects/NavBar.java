@@ -1,6 +1,7 @@
-package cucumber.catalog.pageobjects;
+package starter.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.LoadState;
 
 public class NavBar {
 
@@ -16,6 +17,8 @@ public class NavBar {
 
     public void openHomePage() {
         page.navigate("https://practicesoftwaretesting.com");
+        page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+        page.waitForSelector("xpath=(//img[@class='card-img-top'])[1]");
     }
 
     public void toTheContactPage() {

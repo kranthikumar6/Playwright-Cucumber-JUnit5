@@ -1,4 +1,4 @@
-package cucumber.catalog.pageobjects;
+package starter.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;

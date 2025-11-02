@@ -1,9 +1,10 @@
-package cucumber.cucumber.stepdefinitions;
+package starter.cucumber.stepdefinitions;
 
-import cucumber.catalog.pageobjects.NavBar;
-import cucumber.catalog.pageobjects.ProductList;
-import cucumber.catalog.pageobjects.SearchComponent;
-import cucumber.fixtures.ProductSummary;
+import starter.catalog.pageobjects.NavBar;
+import starter.catalog.pageobjects.ProductList;
+import starter.catalog.pageobjects.SearchComponent;
+import starter.cucumber.fixtures.PlaywrightDriverFactory;
+import starter.catalog.pageobjects.ProductSummary;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.And;
@@ -22,9 +23,9 @@ public class ProductCatalogStepDefinitions {
 
     @Before
     public void setupPageObjects() {
-        navBar = new NavBar(PlaywrightCucumberFixtures.getPage());
-        searchComponent = new SearchComponent(PlaywrightCucumberFixtures.getPage());
-        productList = new ProductList(PlaywrightCucumberFixtures.getPage());
+        navBar = new NavBar(PlaywrightDriverFactory.getPage());
+        searchComponent = new SearchComponent(PlaywrightDriverFactory.getPage());
+        productList = new ProductList(PlaywrightDriverFactory.getPage());
     }
 
     @Given("Sally is on the home page")

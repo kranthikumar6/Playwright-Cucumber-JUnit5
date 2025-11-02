@@ -1,9 +1,8 @@
-package cucumber.contact;
+package starter.contact;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
-import cucumber.fixtures.ScreenshotManager;
 import java.nio.file.Path;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
@@ -51,7 +50,6 @@ public class ContactForm {
     }
 
     public void submitForm() {
-        ScreenshotManager.takeScreenshot(page, "Submit contact form");
         page.waitForTimeout(250);
         sendButton.click();
     }
